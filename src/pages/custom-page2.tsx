@@ -6,7 +6,7 @@ type CustomPageProps = {}
 const CustomPage = ({}: CustomPageProps) => {
     return (
       <>
-        <h1>The First custom page</h1>
+        <h1>The Second custom page</h1>
         <div>List</div>
       </>
     )
