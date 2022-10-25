@@ -15,8 +15,3 @@ jobs:
           RUNNER_TEMP: /tmp
       - name: yarn install
         run: yarn install
-      - name: Danger CI
-        uses: vtex/danger@master
-        env:
-          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
-          REQUIRE_CHANGELOG_VERSION: false
