@@ -15,3 +15,6 @@ jobs:
           RUNNER_TEMP: /tmp
       - name: yarn install
         run: yarn install
+      - name: yarn lint
+        run: yarn eslint .
+  
