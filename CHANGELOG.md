@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 
+- Remove invalid syntax from cd.yml
 - Fixed initial two pages.
 
 ### Added
