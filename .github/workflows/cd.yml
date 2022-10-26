@@ -16,11 +16,11 @@ jobs:
     #     working-directory: ./test-ci-cd
     steps: 
       - 
-        name: "Checkout source"
+        name: Checkout source
         uses: actions/checkout@v1
       - 
-        name: "Setup node"
-        node-version: "16"
+        name: Setup node
+        node-version: 16.x
         uses: actions/setup-node@v2
       - 
         name: Install
@@ -29,8 +29,8 @@ jobs:
         name: Build
         run: yarn build
       - 
-        name: "Deploy to Github Pages"
+        name: Deploy to Github Pages
         uses: peaceiris/actions-gh-pages@v3
         with: 
-          github_token: "${{ secrets.GITHUB_TOKEN }}"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
