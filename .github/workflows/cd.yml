@@ -1,5 +1,5 @@
 name: "Continuous Deployment"
-'on': 
+on: 
   workflow_run: 
     branches: 
       - main
@@ -11,22 +11,22 @@ jobs:
   deploy: 
     if: "${{ github.event.workflow_run.conclusion == 'success' }}"
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./test-ci-cd
+    # defaults:
+    #   run:
+    #     working-directory: ./test-ci-cd
     steps: 
-      # - 
-      #   name: "Checkout source"
-      #   uses: actions/checkout@v1
-      # - 
-      #   cache: npm
-      #   name: "Setup node"
-      #   node-version: "16"
-      #   uses: actions/setup-node@v2
-      #   with: ~
-      # - 
-      #   name: Install
-      #   run: "npm install"
+      - 
+        name: "Checkout source"
+        uses: actions/checkout@v1
+      - 
+        cache: npm
+        name: "Setup node"
+        node-version: "16"
+        uses: actions/setup-node@v2
+        with: ~
+      - 
+        name: Install
+        run: "npm install"
       - 
         name: Build
         run: yarn build
