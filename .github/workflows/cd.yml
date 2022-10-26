@@ -1,4 +1,6 @@
 name: "Continuous Deployment"
+'on':
+  pull_request:
 true: 
   workflow_run: 
     branches: 
@@ -12,21 +14,21 @@ jobs:
     if: "${{ github.event.workflow_run.conclusion == 'success' }}"
     runs-on: ubuntu-latest
     steps: 
-      - 
-        name: "Checkout source"
-        uses: actions/checkout@v1
-      - 
-        cache: npm
-        name: "Setup node"
-        node-version: "16"
-        uses: actions/setup-node@v2
-        with: ~
-      - 
-        name: Install
-        run: "npm install"
+      # - 
+      #   name: "Checkout source"
+      #   uses: actions/checkout@v1
+      # - 
+      #   cache: npm
+      #   name: "Setup node"
+      #   node-version: "16"
+      #   uses: actions/setup-node@v2
+      #   with: ~
+      # - 
+      #   name: Install
+      #   run: "npm install"
       - 
         name: Build
-        run: "npm run build"
+        run: yarn build
       - 
         name: "Deploy to Github Pages"
         uses: peaceiris/actions-gh-pages@v3

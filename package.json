@@ -13,7 +13,9 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint \"src/pages/*.tsx\" \"src/**/*.tsx\"",
+    "lint:fix": "yarn --silent lint --fix"
   },
   "dependencies": {
     "gatsby": "^4.24.4",
@@ -26,8 +28,11 @@
     "@types/node": "^17.0.45",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.41.0",
+    "@typescript-eslint/parser": "^5.41.0",
     "danger": "^11.1.4",
     "danger-plugin-keepachangelog": "^1.0.5",
-    "typescript": "^4.8.3"
+    "eslint": "^8.26.0",
+    "typescript": "^4.8.4"
   }
 }
