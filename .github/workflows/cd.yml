@@ -19,14 +19,12 @@ jobs:
         name: "Checkout source"
         uses: actions/checkout@v1
       - 
-        cache: npm
         name: "Setup node"
         node-version: "16"
         uses: actions/setup-node@v2
-        with: ~
       - 
         name: Install
-        run: "npm install"
+        run: yarn install
       - 
         name: Build
         run: yarn build
