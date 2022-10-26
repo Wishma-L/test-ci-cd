@@ -19,6 +19,7 @@ jobs:
       - name: linting
         run: yarn lint
 
-        # Run the Jest unit tests and generate a coverage report.
-      - name: test
-        run: yarn test -- --coverage
+# TODO: Add the test folder and check whether that is working
+      # Run the Jest unit tests and generate a coverage report.
+      # - name: test
+      #   run: yarn test -- --coverage
