@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunktest_ci_cd=self.webpackChunktest_ci_cd||[]).push([[182],{4608:function(e,t,n){n.r(t);var c=n(7294);t.default=function(){return c.createElement(c.Fragment,null,c.createElement("h1",null,"The Second custom page"),c.createElement("div",null,"List"))}}}]);
+//# sourceMappingURL=component---src-pages-custom-page-2-tsx-01e99d15aef2ebfb9e9c.js.map
