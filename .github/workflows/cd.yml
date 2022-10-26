@@ -11,6 +11,9 @@ jobs:
   deploy: 
     if: "${{ github.event.workflow_run.conclusion == 'success' }}"
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./test-ci-cd
     steps: 
       # - 
       #   name: "Checkout source"
@@ -26,9 +29,7 @@ jobs:
       #   run: "npm install"
       - 
         name: Build
-        run: |
-        cd test-ci-cd/test-ci-cd
-        yarn build
+        run: yarn build
       - 
         name: "Deploy to Github Pages"
         uses: peaceiris/actions-gh-pages@v3
