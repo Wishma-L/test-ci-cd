@@ -14,7 +14,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint \"source/*.ts\" \"source/**/*.ts\"",
+    "lint": "eslint \"src/pages/*.tsx\" \"src/**/*.tsx\"",
     "lint:fix": "yarn --silent lint --fix"
   },
   "dependencies": {
