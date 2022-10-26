@@ -1,7 +1,5 @@
 name: "Continuous Deployment"
-'on':
-  pull_request:
-true: 
+'on': 
   workflow_run: 
     branches: 
       - main
